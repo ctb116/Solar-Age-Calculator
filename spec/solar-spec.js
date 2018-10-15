@@ -36,34 +36,51 @@ describe('daysAlive', function() {
   });
 
   it('should return user age in years to Mercury age in years', function() {
-    var ageMercury = (ageDays / mercuryDays).toFixed(1);
+    let ageMercury = (ageDays / mercuryDays).toFixed(1);
     console.log("Age in years on Mercury: " + ageMercury);
     expect(birthday.getMercuryAge()).toEqual(ageMercury);
   });
 
   it('should return user age in years to Venus age in years', function() {
-    var ageVenus = (ageDays / venusDays).toFixed(1);
+    let ageVenus = (ageDays / venusDays).toFixed(1);
     console.log("Age in years on Venus: " + ageVenus);
     expect(birthday.getVenusAge()).toEqual(ageVenus);
   });
 
   it('should return user age in years to Mars age in years', function() {
-    var ageMars = (ageDays / marsDays).toFixed(1);
+    let ageMars = (ageDays / marsDays).toFixed(1);
     console.log("Age in years on Mars: " + ageMars);
     expect(birthday.getMarsAge()).toEqual(ageMars);
   });
 
   it('should return user age in years to Jupiter age in years', function() {
-    var ageJupiter = (ageDays / jupiterDays).toFixed(1);
+    let ageJupiter = (ageDays / jupiterDays).toFixed(1);
     console.log("Age in years on Jupiter: " + ageJupiter);
     expect(birthday.getJupiterAge()).toEqual(ageJupiter);
   });
 
-  it('should turn user time left/dead in Mercury years', function() {
-    var timeMercury = (birthday.getMercuryAge() - lifeExpectancy).toFixed(1);
-    console.log("Time left on Mercury: " + timeMercury);
-    expect(birthday.getMercuryLife()).toEqual("You've been dead for " + timeMercury + " on Mercury )=");
+  it('should return user time dead in Mercury years', function() {
+    let timeMercury = (birthday.getMercuryAge() - lifeExpectancy).toFixed(1);
+    console.log("Time dead on Mercury: " + timeMercury);
+    expect(birthday.getMercuryLife()).toEqual("You've been dead for " + timeMercury + " years on Mercury )=");
   });
 
+  it('should return user time left alive in Venus years', function() {
+    let timeVenus = (birthday.getVenusAge() - lifeExpectancy).toFixed(1);
+    console.log("Time left on Venus: " + timeVenus);
+    expect(birthday.getVenusLife()).toEqual("You have " + timeVenus + " years left on Venus");
+  });
+
+  it('should return user time left alive in Mars years', function() {
+    let timeMars = (birthday.getMarsAge() - lifeExpectancy).toFixed(1);
+    console.log("Time left on Mars: " + timeMars);
+    expect(birthday.getMarsLife()).toEqual("You have " + timeMars + " years left on Mars");
+  });
+
+  it('should return user time life alive in Jupiter years', function() {
+    let timeJupiter = (birthday.getJupiterAge() - lifeExpectancy).toFixed(1);
+    console.log("Time left on Jupiter: " + timeJupiter);
+    expect(birthday.getJupiterLife()).toEqual("You have " + timeJupiter + " years left on Jupiter");
+  });
 
 });
