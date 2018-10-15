@@ -14,15 +14,16 @@ _Solar Age Calculator allows users to find out their age on other planets in the
 
 * Example Input(birthday): _'10/20/1990'_
 * Example Output:
-_Age in days:10222.6_
-_Age in years on Mercury: 116.2 years_
- _Age in years on Venus: 45.5 years_
- _Age in years on Mars: 14.9 years_
- _Age in years on Jupiter: 2.4 years_
- _Time left on Mercury: "You've been dead for 30.2 years on Mercury."_
- _Time left on Venus: "You have 40.5 years left on Venus."_
- _Time left on Mars: "You have 71.1 years left on Mars"._
- _Time left on Jupiter: "You have 83.6 years left on Jupiter."_
+
+_Age in days:10222.6_<br/>
+_Age in years on Mercury: 116.2 years_<br/>
+_Age in years on Venus: 45.5 years_<br/>
+_Age in years on Mars: 14.9 years_<br/>
+_Age in years on Jupiter: 2.4 years_<br/>
+_Time left on Mercury: "You've been dead for 30.2 years on Mercury."_<br/>
+_Time left on Venus: "You have 40.5 years left on Venus."_<br/>
+_Time left on Mars: "You have 71.1 years left on Mars"._<br/>
+_Time left on Jupiter: "You have 83.6 years left on Jupiter."_<br/>
 
 
 ## Setup/Installation Requirements
