@@ -3,18 +3,20 @@ import { SolarAge } from '../src/solar.js';
 describe('daysAlive', function() {
   var today;
   var oneDay;
-  var birthday;
+  var inputBirthday;
   var ageDays;
   var mercuryDays;
   var venusDays;
   var marsDays;
   var jupiterDays;
+  var birthday;
 
   beforeEach(function() {
     today = new Date();
     oneDay = 24*60*60*1000; //hours*minutes*seconds*milliseconds - Convert day to milliseconds
-    birthday = new Date("10/20/1990");
-    ageDays = ((today.getTime() - birthday.getTime())/(oneDay)).toFixed(1);
+    inputBirthday = new Date("10/20/1990");
+    ageDays = ((today.getTime() - inputBirthday.getTime())/(oneDay)).toFixed(1);
+    birthday = new SolarAge(inputBirthday);
   });
 
   beforeEach(function() {
@@ -26,13 +28,16 @@ describe('daysAlive', function() {
 
   it('should return user birthday to as number of days alive', function() {
     console.log("Age in days:" + ageDays);
-    birthday = new Date("10/20/1990");
-    expect(birthday.getDays()).toEqual(ageDays);
+    birthday = new SolarAge(inputBirthday);
+    let getDaystest = (birthday.getDays);
+    expect(getDaystest).toEqual(ageDays);
   });
 
   it('should return user age in years to Mercury age in years', function() {
     var ageMercury = (ageDays / mercuryDays).toFixed(1);
+    let getMercuryAgeTest = (birthday.getDays).getMercuryAge;
     console.log("Age in years on Mercury: " + ageMercury);
+    expect(getMercuryAgeTest).toEqual(ageMercury);
   });
 
   it('should return user age in years to Venus age in years', function() {

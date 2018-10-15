@@ -1,3 +1,29 @@
+UI
+
+User can enter their birthday and get their age in years and days back in Earth's rotation;
+
+after they enter their birthday and see the above - users can see buttons to see their age and birthday's date on other planets
+
+users can only click on one button at a time to see that planets info concerning their date.
+ex: after they enter their birthday - Earth's info pop's up but if they click on other buttons that info replaces earth's info
+
+input - birthday
+- sees Earth
+buttons: other plants info
+keep original info on top
+
+(if they enter they're birthday and it equals today's date then "Happy Birthday" text appears along with different animation for planets)
+
+Life expectancy -
+-enter info about user's habits to determine life expectancy
+
+
+
+
+
+
+
+
 1) program takes a user's age in years
   1) Take age by birthday and get the number of days since birthday
 

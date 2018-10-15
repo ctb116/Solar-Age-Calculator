@@ -1,20 +1,41 @@
 export class SolarAge {
   constructor(birthday) {
     this.birthday = birthday;
+    this.getDays = this.getAgeDays();
+    this.getMercuryAge = this.getMercuryAge();
   }
 
+  // const today = new Date();
+  // const oneDay = 24*60*60*1000;
 
-  getDays() {
+  // const mercuryDays = 88.0;
+  // const venusDays = 224.7;
+  // const marsDays = 686.7;
+  // const jupiterDays = 4331.2;
+
+  getAgeDays() {
   const today = new Date();
   const oneDay = 24*60*60*1000;
-  let ageDays = ((today.getTime() - this.birthday.getTime())/(oneDay)).toFixed(1);
+  let birthday = this.birthday;
+  let ageDays = ((today.getTime() - birthday.getTime())/(oneDay)).toFixed(1);
   return ageDays;
+
+
+  getMercuryAge() {
+    const mercuryDays = 88.0;
+    let mercuryAge = (getAgeDays() / mercuryDays).toFixed(1);
+    return mercuryAge;
   }
+
+};
 
 
 
 }
 
+//
+// console.log("test");
+// console.log("test");
 
 // export function Solar(birthday) {
 //   this.birthday = birthday;
