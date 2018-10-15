@@ -29,30 +29,32 @@ describe('daysAlive', function() {
   it('should return user birthday to as number of days alive', function() {
     console.log("Age in days:" + ageDays);
     birthday = new SolarAge(inputBirthday);
-    let getDaystest = (birthday.getDays);
-    expect(getDaystest).toEqual(ageDays);
+    let getEarthDaysTest = (birthday.earthDays);
+    expect(getEarthDaysTest).toEqual(ageDays);
   });
 
   it('should return user age in years to Mercury age in years', function() {
     var ageMercury = (ageDays / mercuryDays).toFixed(1);
-    let getMercuryAgeTest = (birthday.getDays).getMercuryAge;
     console.log("Age in years on Mercury: " + ageMercury);
-    expect(getMercuryAgeTest).toEqual(ageMercury);
+    expect(birthday.getMercuryAge()).toEqual(ageMercury);
   });
 
   it('should return user age in years to Venus age in years', function() {
     var ageVenus = (ageDays / venusDays).toFixed(1);
     console.log("Age in years on Venus: " + ageVenus);
+    expect(birthday.getVenusAge()).toEqual(ageVenus);
   });
 
   it('should return user age in years to Mars age in years', function() {
     var ageMars = (ageDays / marsDays).toFixed(1);
     console.log("Age in years on Mars: " + ageMars);
+    expect(birthday.getMarsAge()).toEqual(ageMars);
   });
 
   it('should return user age in years to Jupiter age in years', function() {
     var ageJupiter = (ageDays / jupiterDays).toFixed(1);
     console.log("Age in years on Jupiter: " + ageJupiter);
+    expect(birthday.getJupiterAge()).toEqual(ageJupiter);
   });
 
 

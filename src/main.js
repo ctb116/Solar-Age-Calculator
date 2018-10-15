@@ -8,9 +8,9 @@ $(document).ready(function() {
 
 
 
-  $('.selectPlanet').click(function() {
-    if(this.id === 'mercury') {
-
-    }
-  });
+  // $('.selectPlanet').click(function() {
+  //   if(this.id === 'mercury') {
+  //
+  //   }
+  // });
 });

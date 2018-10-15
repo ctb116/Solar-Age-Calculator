@@ -1,61 +1,37 @@
 export class SolarAge {
   constructor(birthday) {
     this.birthday = birthday;
-    this.getDays = this.getAgeDays();
-    this.getMercuryAge = this.getMercuryAge();
+    this.earthDays = this.getEarthDays();
   }
 
-  // const today = new Date();
-  // const oneDay = 24*60*60*1000;
-
-  // const mercuryDays = 88.0;
-  // const venusDays = 224.7;
-  // const marsDays = 686.7;
-  // const jupiterDays = 4331.2;
-
-  getAgeDays() {
+  getEarthDays() {
   const today = new Date();
   const oneDay = 24*60*60*1000;
-  let birthday = this.birthday;
-  let ageDays = ((today.getTime() - birthday.getTime())/(oneDay)).toFixed(1);
-  return ageDays;
-
+  let earthDays = ((today.getTime() - this.birthday.getTime())/(oneDay)).toFixed(1);
+  return earthDays;
+  }
 
   getMercuryAge() {
     const mercuryDays = 88.0;
-    let mercuryAge = (getAgeDays() / mercuryDays).toFixed(1);
+    let mercuryAge = (this.earthDays / mercuryDays).toFixed(1);
     return mercuryAge;
   }
 
-};
+  getVenusAge() {
+    const venusDays = 224.7;
+    let venusAge = (this.earthDays / venusDays).toFixed(1);
+    return venusAge;
+  }
 
+  getMarsAge() {
+    const marsDays = 686.7;
+    let marsAge = (this.earthDays / marsDays).toFixed(1);
+    return marsAge;
+  }
 
-
+  getJupiterAge() {
+    const jupiterDays = 4331.2;
+    let jupiterAge = (this.earthDays / jupiterDays).toFixed(1);
+    return jupiterAge;
+  }
 }
-
-//
-// console.log("test");
-// console.log("test");
-
-// export function Solar(birthday) {
-//   this.birthday = birthday;
-// }
-//
-// const today = new Date();
-// const oneDay = 24*60*60*1000;
-//
-// const mercuryDays = 88.0;
-// const venusDays = 224.7;
-// const marsDays = 686.7;
-// const jupiterDays = 4331.2;
-//
-// Solar.prototype.getDays = function () {
-// var ageDays = ((today.getTime() - this.birthday.getTime())/(oneDay)).toFixed(1)
-// console.log(ageDays);
-// return ageDays;
-// };
-//
-// //Days in a year for Mercury, Venus, Mars, Jupiter
-// const solarDays = [88.0, 224.7, 686.7, 4331.2]
-// //Average US life expectancy
-// const lifeExp = 79;
