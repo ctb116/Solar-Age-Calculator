@@ -28,6 +28,10 @@ describe('daysAlive', function() {
     jupiterDays = 4331.2;
   });
 
+  it('should return Happy Birthday message if user birthday equal today', function() {
+
+  });
+
   it('should return user birthday to as number of days alive', function() {
     console.log("Age in days:" + ageDays);
     birthday = new SolarAge(inputBirthday);

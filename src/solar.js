@@ -12,7 +12,7 @@ export class SolarAge {
   getEarthDays() {
   const today = new Date();
   const oneDay = 24*60*60*1000;
-  let earthDays = ((today.getTime() - this.birthday.getTime())/(oneDay)).toFixed(1);
+  let earthDays = ((today.getTime() - (this.birthday).getTime())/(oneDay)).toFixed(1);
   return earthDays;
   }
 

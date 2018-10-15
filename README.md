@@ -1,58 +1,51 @@
+# _Solar Age Calculator_
+
+#### _Week 11 Independent Project for Epicodus, 10.12.2018_
+
+#### By _**Catherine Bradley**_
+
+## Description
+
+_This is a JavaScript program using webpack_
+
+_Solar Age Calculator allows users to find out their age on other planets in the Solar System (Mercury, Venus, Mars, Jupiter). The program determines the user's age based on planet's rotation time around the Sun. Given the user's new planetary age, the program returns how many years the user has left to live, or how long the user has been dead, based on average life expectancy in the US (86 years)._
+
+### Specifications
+
+* Example Input(birthday): _'10/20/1990'_
+* Example Output:
+_Age in days:10222.6
+ Age in years on Mercury: 116.2 years
+ Age in years on Venus: 45.5 years
+ Age in years on Mars: 14.9 years
+ Age in years on Jupiter: 2.4 years
+ Time left on Mercury: "You've been dead for 30.2 years on Mercury."
+ Time left on Venus: "You have 40.5 years left on Venus."
+ Time left on Mars: "You have 71.1 years left on Mars".
+ Time left on Jupiter: "You have 83.6 years left on Jupiter."_
 
 
+## Setup/Installation Requirements
 
-UI
+* _Clone this repository_
+* _Enter npm install in your terminal_
+* _Enter npm test (program currently has no UI)_
 
-User can enter their birthday and get their age in years and days back in Earth's rotation;
+## Known Bugs / Assumptions
 
-after they enter their birthday and see the above - users can see buttons to see their age and birthday's date on other planets
+* _program assumes life expectancy for all users is 86 years._
 
-users can only click on one button at a time to see that planets info concerning their date.
-ex: after they enter their birthday - Earth's info pop's up but if they click on other buttons that info replaces earth's info
+## Support and contact details
 
-input - birthday
-- sees Earth
-buttons: other plants info
-keep original info on top
+_For feedback, please contact Catherine Bradley at catherinetybradley@gmail.com_
 
-(if they enter they're birthday and it equals today's date then "Happy Birthday" text appears along with different animation for planets)
+## Technologies Used
 
-Life expectancy -
--enter info about user's habits to determine life expectancy
+* _JavaScript_
+* _NPM_
+* _Jasmine_
+* _Karma_
 
+### Legal
 
-
-
-
-
-
-
-1) program takes a user's age in years
-  1) Take age by birthday and get the number of days since birthday
-
-
-age on other planets
-2) program returns user's age in Mercury's years (.24 Earth Years)
-if age is 27 Earth years then age in Mercury's years is (27 / .24) = 116.1 years
-
-3) program returns user's age in Venus's years (.62 Earth Years)
-4) same in Mar's years (1.88 Earth years)
-5) same in Jupiter's years (11.86 Earth Years)
-
-
-
-Amount of days in a year by planet
-1) Mercury - 87.97 days
-2) Venus 224.7 days
-3) Mars 1.88 Years
-4) Jupiter 11.86 Years
-
-
-life expectancy on other plants
-6) program returns how many years the user has left to live on each planet by years based on user's life expectancy
-In the US the average life expectance for both sexes is 79 years.
-
-7) if user has pass their life expectancy on other planet - return how long they've been dead in years
-
-For later
-8) determine life expectancy of user based on user's demographic and lifestyle https://www.ssa.gov/planners/lifeexpectancy.html
+*NA*
