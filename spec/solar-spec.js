@@ -10,13 +10,15 @@ describe('daysAlive', function() {
   var marsDays;
   var jupiterDays;
   var birthday;
+  var lifeExpectancy
 
   beforeEach(function() {
     today = new Date();
     oneDay = 24*60*60*1000; //hours*minutes*seconds*milliseconds - Convert day to milliseconds
     inputBirthday = new Date("10/20/1990");
+    lifeExpectancy = 86;
     ageDays = ((today.getTime() - inputBirthday.getTime())/(oneDay)).toFixed(1);
-    birthday = new SolarAge(inputBirthday);
+    birthday = new SolarAge(inputBirthday, lifeExpectancy);
   });
 
   beforeEach(function() {
@@ -55,6 +57,12 @@ describe('daysAlive', function() {
     var ageJupiter = (ageDays / jupiterDays).toFixed(1);
     console.log("Age in years on Jupiter: " + ageJupiter);
     expect(birthday.getJupiterAge()).toEqual(ageJupiter);
+  });
+
+  it('should turn user time left/dead in Mercury years', function() {
+    var timeMercury = (birthday.getMercuryAge() - lifeExpectancy).toFixed(1);
+    console.log("Time left on Mercury: " + timeMercury);
+    expect(birthday.getMercuryLife()).toEqual("You've been dead for " + timeMercury + " on Mercury )=");
   });
 
 

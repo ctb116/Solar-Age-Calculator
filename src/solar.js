@@ -1,7 +1,9 @@
 export class SolarAge {
-  constructor(birthday) {
+  constructor(birthday, lifeExpectancy) {
     this.birthday = birthday;
+    this.lifeExpectancy = lifeExpectancy;
     this.earthDays = this.getEarthDays();
+    this.mercuryAge = this.getMercuryAge();
   }
 
   getEarthDays() {
@@ -33,5 +35,14 @@ export class SolarAge {
     const jupiterDays = 4331.2;
     let jupiterAge = (this.earthDays / jupiterDays).toFixed(1);
     return jupiterAge;
+  }
+
+  getMercuryLife() {
+    let mercuryTime = (this.mercuryAge - this.lifeExpectancy).toFixed(1);
+    if (mercuryTime > 0) {
+      return "You've been dead for " + mercuryTime + " on Mercury )=";
+    } else {
+      return "You have " + mercuryTime + " left on Mercury";
+    }
   }
 }
