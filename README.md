@@ -14,7 +14,6 @@ _Solar Age Calculator allows users to find out their age on other planets in the
 
 * Example Input(birthday): _'10/20/1990'_
 * Example Output:
-
 _Age in days:10222.6_<br/>
 _Age in years on Mercury: 116.2 years_<br/>
 _Age in years on Venus: 45.5 years_<br/>

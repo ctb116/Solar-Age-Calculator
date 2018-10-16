@@ -15,7 +15,7 @@ describe('daysAlive', function() {
   beforeEach(function() {
     today = new Date();
     oneDay = 24*60*60*1000; //hours*minutes*seconds*milliseconds - Convert day to milliseconds
-    inputBirthday = new Date("10/20/1990");
+    inputBirthday = new Date("10/16/1990");
     lifeExpectancy = 86;
     ageDays = ((today.getTime() - inputBirthday.getTime())/(oneDay)).toFixed(1);
     birthday = new SolarAge(inputBirthday, lifeExpectancy);
@@ -28,15 +28,24 @@ describe('daysAlive', function() {
     jupiterDays = 4331.2;
   });
 
-  it('should return Happy Birthday message if user birthday equal today', function() {
-
-  });
-
   it('should return user birthday to as number of days alive', function() {
     console.log("Age in days:" + ageDays);
     birthday = new SolarAge(inputBirthday);
     let getEarthDaysTest = (birthday.earthDays);
     expect(getEarthDaysTest).toEqual(ageDays);
+  });
+
+  it('should return Happy Birthday message if user birthday equal today', function() {
+    let birthdayToday = new Date();
+    let birthdayTodayMonth = birthdayToday.getMonth();
+    let birthdayTodayDay = birthdayToday.getDay();
+    let date = new Date();
+    let dateMonth = date.getMonth();
+    let dateDay = date.getDay();
+    let birthdayTest = (birthday.checkBirthday);
+    console.log("Birthday" + birthdayTodayMonth + birthdayTodayDay);
+    console.log("Today" + dateMonth + dateDay);
+    expect(birthdayTest).toEqual("Happy Birthday!!!!");
   });
 
   it('should return user age in years to Mercury age in years', function() {

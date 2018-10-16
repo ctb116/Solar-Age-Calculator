@@ -3,6 +3,7 @@ export class SolarAge {
     this.birthday = birthday;
     this.lifeExpectancy = lifeExpectancy;
     this.earthDays = this.getEarthDays();
+    this.checkBirthday = this.checkBirthday();
     this.mercuryAge = this.getMercuryAge();
     this.venusAge = this.getVenusAge();
     this.marsAge = this.getMarsAge();
@@ -15,6 +16,21 @@ export class SolarAge {
   let earthDays = ((today.getTime() - (this.birthday).getTime())/(oneDay)).toFixed(1);
   return earthDays;
   }
+
+  checkBirthday() {
+    let date = new Date();
+    let dateMonth = date.getMonth();
+    let dateDay = date.getDay();
+    let birthdayMonth = (this.birthday).getMonth();
+    let birthdayDay = (this.birthday).getDay();
+
+    if ((dateMonth + dateDay) === (birthdayMonth + birthdayDay)) {
+      return "Happy Birthday!!!!";
+    } else {
+      return "no birthday";
+    }
+  }
+
 
   getMercuryAge() {
     const mercuryDays = 88.0;
